@@ -1,9 +1,9 @@
 @font-face {
-  font-family: 'Ubuntu';
-  src: url('/storage/fonts/ubuntu/Ubuntu.woff2') format('woff2'),
-       url('/storage/fonts/ubuntu/Ubuntu.woff') format('woff'),
-       url('/storage/fonts/ubuntu/Ubuntu.ttf') format('truetype'),
-       url('/storage/fonts/ubuntu/Ubuntu.otf') format('otf');
+  font-family: "Ubuntu";
+  src: url("/storage/fonts/ubuntu/Ubuntu.woff2") format("woff2"),
+    url("/storage/fonts/ubuntu/Ubuntu.woff") format("woff"),
+    url("/storage/fonts/ubuntu/Ubuntu.ttf") format("truetype"),
+    url("/storage/fonts/ubuntu/Ubuntu.otf") format("otf");
 }
 
 :root {
@@ -28,9 +28,9 @@ html {
 
 body {
   background-color: var(--primary-light);
-  background-image: url('seraph.jpg');
+  background-image: url("Purple.jpg");
   color: var(--primary-dark);
-  font-family: 'Ubuntu', sans-serif;
+  font-family: "Ubuntu", sans-serif;
   line-height: 1.6;
   /* footer support */
   margin-bottom: 100px;
@@ -96,32 +96,32 @@ button.active {
 }
 
 button,
-input[type='color'] {
+input[type="color"] {
   transition: transform 0.1s ease-in-out;
 }
 
 button:hover,
-input[type='color']:hover {
+input[type="color"]:hover {
   transform: scale(1.05);
 }
 
-input[type='color']:active {
+input[type="color"]:active {
   transition: transform 0.05s ease-in-out;
   transform: scale(1);
 }
 
-input[type='color'] {
+input[type="color"] {
   -webkit-appearance: none;
   width: 80px;
   height: 80px;
   border: none;
 }
 
-input[type='color']::-webkit-color-swatch-wrapper {
+input[type="color"]::-webkit-color-swatch-wrapper {
   padding: 0;
 }
 
-input[type='color']::-webkit-color-swatch {
+input[type="color"]::-webkit-color-swatch {
   border: 3px solid white;
 }
 
@@ -130,19 +130,19 @@ input[type='color']::-webkit-color-swatch {
   font-size: 20px;
 }
 
-input[type='range'] {
+input[type="range"] {
   -webkit-appearance: none;
   background-color: var(--primary-light);
 }
 
-input[type='range']::-webkit-slider-runnable-track {
+input[type="range"]::-webkit-slider-runnable-track {
   height: 10px;
   border: 1px solid var(--primary-dark);
   border-radius: 25px;
   background: var(--secondary-light);
 }
 
-input[type='range']::-webkit-slider-thumb {
+input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   width: 24px;
   height: 24px;

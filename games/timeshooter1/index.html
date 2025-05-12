@@ -1,22 +1,30 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-7FN7LEVWXD"></script>
+    <script
+      async=""
+      src="https://www.googletagmanager.com/gtag/js?id=G-7FN7LEVWXD"
+    ></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-    gtag('config', 'G-7FN7LEVWXD');
+      gtag("config", "G-7FN7LEVWXD");
     </script>
 
-    <title>Time Shooter 1 | Seraph</title>
-    <link rel="shortcut icon" href="../../images/ico.ico" type="image/x-icon">
+    <title>Time Shooter 1 | Purple</title>
+    <link rel="shortcut icon" href="../../images/ico.ico" type="image/x-icon" />
     <script src="../../storage/js/cloak.js"></script>
 
     <meta charset="utf-8" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
 
     <link rel="stylesheet" href="TemplateData/style.css" />
   </head>
@@ -51,13 +59,25 @@
       const container = document.querySelector("#unity-container");
       const canvas = document.querySelector("#unity-canvas");
       const loadingCover = document.querySelector("#loading-cover");
-      const progressBarEmpty = document.querySelector("#unity-progress-bar-empty");
-      const progressBarFull = document.querySelector("#unity-progress-bar-full");
-      const fullscreenButton = document.querySelector("#unity-fullscreen-button");
+      const progressBarEmpty = document.querySelector(
+        "#unity-progress-bar-empty"
+      );
+      const progressBarFull = document.querySelector(
+        "#unity-progress-bar-full"
+      );
+      const fullscreenButton = document.querySelector(
+        "#unity-fullscreen-button"
+      );
       const spinner = document.querySelector(".spinner");
 
       const canFullscreen = (function () {
-        for (const key of ["exitFullscreen", "webkitExitFullscreen", "webkitCancelFullScreen", "mozCancelFullScreen", "msExitFullscreen"]) {
+        for (const key of [
+          "exitFullscreen",
+          "webkitExitFullscreen",
+          "webkitCancelFullScreen",
+          "mozCancelFullScreen",
+          "msExitFullscreen",
+        ]) {
           if (key in document) {
             return true;
           }
@@ -69,7 +89,8 @@
         container.className = "unity-mobile";
         config.devicePixelRatio = 1;
       }
-      canvas.style.background = "url('" + buildUrl + "/TimeGD.jpg') center / cover";
+      canvas.style.background =
+        "url('" + buildUrl + "/TimeGD.jpg') center / cover";
       loadingCover.style.display = "";
 
       const script = document.createElement("script");

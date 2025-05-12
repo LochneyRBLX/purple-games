@@ -1,17 +1,26 @@
 <html lang="en">
   <head>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FN7LEVWXD"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-7FN7LEVWXD"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-          gtag('config', 'G-7FN7LEVWXD');
-        </script>
+      gtag("config", "G-7FN7LEVWXD");
+    </script>
 
-    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui, shrink-to-fit=no" />
-    <title>Bob The Robber 2 | Seraph</title>
-    <link rel="shortcut icon" href="../../images/ico.ico">
+    <meta
+      id="viewport"
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui, shrink-to-fit=no"
+    />
+    <title>Bob The Robber 2 | Purple</title>
+    <link rel="shortcut icon" href="../../images/ico.ico" />
     <link rel="stylesheet" href="assets/css/app.css" type="text/css" />
     <script src="../../storage/js/cloak.js"></script>
   </head>
@@ -41,9 +50,17 @@
         },
         false
       );
-      if (typeof window.devicePixelRatio != "undefined" && window.devicePixelRatio > 2) {
+      if (
+        typeof window.devicePixelRatio != "undefined" &&
+        window.devicePixelRatio > 2
+      ) {
         var meta = document.getElementById("viewport");
-        meta.setAttribute("content", "width=device-width, initial-scale=" + 2 / window.devicePixelRatio + ", user-scalable=no");
+        meta.setAttribute(
+          "content",
+          "width=device-width, initial-scale=" +
+            2 / window.devicePixelRatio +
+            ", user-scalable=no"
+        );
       }
 
       addScript("version.js", Date.now(), function () {

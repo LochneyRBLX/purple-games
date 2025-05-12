@@ -1,38 +1,59 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FN7LEVWXD"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-7FN7LEVWXD"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-          gtag('config', 'G-7FN7LEVWXD');
-        </script>
+      gtag("config", "G-7FN7LEVWXD");
+    </script>
 
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Townscaper | Seraph</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Townscaper | Purple</title>
 
-<script src="../../storage/js/cloak.js"></script>
+    <script src="../../storage/js/cloak.js"></script>
 
-<link rel="manifest" href="manifest.json">
+    <link rel="manifest" href="manifest.json" />
 
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="application-name" content="Native">
-<meta name="apple-mobile-web-app-title" content="Native">
-<meta name="theme-color" content="#0275d8">
-<meta name="msapplication-navbutton-color" content="#0275d8">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="msapplication-starturl" content="/">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="Native" />
+    <meta name="apple-mobile-web-app-title" content="Native" />
+    <meta name="theme-color" content="#0275d8" />
+    <meta name="msapplication-navbutton-color" content="#0275d8" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="msapplication-starturl" content="/" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
-<link rel="icon" type="image/png" sizes="195x253" href="images/native.png">
-<link rel="apple-touch-icon" type="image/png" sizes="195x253" href="images/native.png">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="195x253"
+      href="images/native.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      type="image/png"
+      sizes="195x253"
+      href="images/native.png"
+    />
 
-    <link rel="icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
+    <link rel="icon" href="TemplateData/favicon.ico" />
+    <link rel="stylesheet" href="TemplateData/style.css" />
     <script type="application/javascript" src="/js/main.js"></script>
   </head>
   <body>
@@ -40,7 +61,7 @@
       <canvas id="unity-canvas"></canvas>
       <div id="unity-loading-bar">
         <div id="unity-progress-bar-empty">
-          <div id="unity-progress-bar-full"></div> 
+          <div id="unity-progress-bar-full"></div>
         </div>
       </div>
       <div id="unity-mobile-warning">
@@ -86,19 +107,22 @@
         //canvas.style.width = "100%";
         //canvas.style.height = "100%";
       }
-      canvas.style.background = "url('" + buildUrl + "/WebGL.jpg') center / cover";
+      canvas.style.background =
+        "url('" + buildUrl + "/WebGL.jpg') center / cover";
       loadingBar.style.display = "block";
 
-      var script = document.createElement("script"); 
+      var script = document.createElement("script");
       script.src = loaderUrl;
       script.onload = () => {
         createUnityInstance(canvas, config, (progress) => {
           progressBarFull.style.width = 100 * progress + "%";
-        }).then((unityInstance) => {
-          loadingBar.style.display = "none";
-        }).catch((message) => {
-          alert(message);
-        });
+        })
+          .then((unityInstance) => {
+            loadingBar.style.display = "none";
+          })
+          .catch((message) => {
+            alert(message);
+          });
       };
       document.body.appendChild(script);
     </script>

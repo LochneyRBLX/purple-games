@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FN7LEVWXD"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-7FN7LEVWXD"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-      gtag('config', 'G-7FN7LEVWXD');
+      gtag("config", "G-7FN7LEVWXD");
     </script>
-<title>Pako Highway | Seraph</title>
-<script src="../../storage/js/cloak.js"></script>
-<link rel="shortcut icon" href="../../images/ico.ico" type="image/x-icon">
+    <title>Pako Highway | Purple</title>
+    <script src="../../storage/js/cloak.js"></script>
+    <link rel="shortcut icon" href="../../images/ico.ico" type="image/x-icon" />
 
-
-
-    <meta charset="utf8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <link rel="stylesheet" href="TemplateData/style.css">
+    <meta charset="utf8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="TemplateData/style.css" />
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
@@ -28,15 +31,13 @@
           <div id="unity-progress-bar-full"></div>
         </div>
       </div>
-      <div id="unity-footer" style="display: none;">
+      <div id="unity-footer" style="display: none">
         <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
         <div id="unity-build-title">Pako Highway</div>
       </div>
     </div>
 
-
-    
     <script>
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/phhh.loader.js";
@@ -70,14 +71,16 @@
       script.onload = () => {
         createUnityInstance(canvas, config, (progress) => {
           progressBarFull.style.width = 100 * progress + "%";
-        }).then((unityInstance) => {
-          loadingBar.style.display = "none";
-          fullscreenButton.onclick = () => {
-            unityInstance.SetFullscreen(1);
-          };
-        }).catch((message) => {
-          alert(message);
-        });
+        })
+          .then((unityInstance) => {
+            loadingBar.style.display = "none";
+            fullscreenButton.onclick = () => {
+              unityInstance.SetFullscreen(1);
+            };
+          })
+          .catch((message) => {
+            alert(message);
+          });
       };
       document.body.appendChild(script);
     </script>

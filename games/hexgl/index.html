@@ -1,35 +1,51 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FN7LEVWXD"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-7FN7LEVWXD"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-      gtag('config', 'G-7FN7LEVWXD');
+      gtag("config", "G-7FN7LEVWXD");
     </script>
-<title>HexGL | Seraph</title>
-<script src="../../storage/js/cloak.js"></script>
-<link rel="shortcut icon" href="../../images/ico.ico" type="image/x-icon">
+    <title>HexGL | Purple</title>
+    <script src="../../storage/js/cloak.js"></script>
+    <link rel="shortcut icon" href="../../images/ico.ico" type="image/x-icon" />
 
+    <meta charset="utf-8" />
 
-
-
-
-   
-    <meta charset="utf-8">
-  
-    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-    <link rel="stylesheet" href="css/multi.css" type="text/css" charset="utf-8">
-    <link rel="stylesheet" href="css/fonts.css" type="text/css" charset="utf-8">
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <link
+      rel="stylesheet"
+      href="css/multi.css"
+      type="text/css"
+      charset="utf-8"
+    />
+    <link
+      rel="stylesheet"
+      href="css/fonts.css"
+      type="text/css"
+      charset="utf-8"
+    />
     <style>
       body {
-        padding:0;
-        margin:0;
+        padding: 0;
+        margin: 0;
       }
-      canvas { pointer-events:none; width: 100%;}
-      #overlay{
+      canvas {
+        pointer-events: none;
+        width: 100%;
+      }
+      #overlay {
         position: absolute;
         z-index: 9999;
         top: 0;
@@ -42,8 +58,7 @@
   <body>
     <div id="step-1">
       <div id="global"></div>
-      <div id="title">
-      </div>
+      <div id="title"></div>
       <div id="menucontainer">
         <div id="menu">
           <div id="start">Start</div>
@@ -71,12 +86,15 @@
     </div>
     <div id="credits" style="display: none">
       <h3>Code</h3>
-      <p><b>Concept and Development</b><br>Thibaut Despoulain (BKcore)</p>
-      <p><b>Contributors</b><br>townxelliot<br>mahesh.kk</p>
-      <p><b>Technologies</b><br>WebGL<br>JavaScript<br>CoffeeScript<br>Three.js<br>LeapMotion</p>
+      <p><b>Concept and Development</b><br />Thibaut Despoulain (BKcore)</p>
+      <p><b>Contributors</b><br />townxelliot<br />mahesh.kk</p>
+      <p>
+        <b>Technologies</b
+        ><br />WebGL<br />JavaScript<br />CoffeeScript<br />Three.js<br />LeapMotion
+      </p>
       <h3>Graphics</h3>
-      <p><b>HexMKI base model</b><br>Charnel</p>
-      <p><b>Track texture</b><br>Nobiax</p>
+      <p><b>HexMKI base model</b><br />Charnel</p>
+      <p><b>Track texture</b><br />Nobiax</p>
       <h4>Click anywhere to continue.</h4>
     </div>
 
@@ -121,6 +139,5 @@
     <script src="bkcore/hexgl/HexGL.js"></script>
 
     <script src="launch.js"></script>
-
   </body>
 </html>

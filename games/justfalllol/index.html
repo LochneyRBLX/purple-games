@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="en-us">
   <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7FN7LEVWXD"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-7FN7LEVWXD"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-      gtag('config', 'G-7FN7LEVWXD');
+      gtag("config", "G-7FN7LEVWXD");
     </script>
 
-    <title>Just Fall LOL | Seraph</title>
-    <link href="../../images/ico.ico" rel="shortcut icon">
+    <title>Just Fall LOL | Purple</title>
+    <link href="../../images/ico.ico" rel="shortcut icon" />
     <script src="../../storage/js/cloak.js"></script>
 
     <meta charset="utf-8" />
@@ -39,7 +44,10 @@
           var failFn = function (o) {
             o && typeof o === "object" && o.fail && o.fail();
           };
-          drutObj && Array.isArray(drutObj.cmd) && drutObj.cmd.forEach(failFn) && (drutObj.cmd.length = 0);
+          drutObj &&
+            Array.isArray(drutObj.cmd) &&
+            drutObj.cmd.forEach(failFn) &&
+            (drutObj.cmd.length = 0);
           window.cpmstarAPI = window["_" + zonefile] = failFn;
         }
         var rnd = Math.round(Math.random() * 999999);
@@ -48,10 +56,13 @@
         s.async = true;
         s.onerror = failCpmstarAPI;
         var proto = document.location.protocol;
-        var host = proto == "https:" || proto == "file:" ? "https://server" : "//cdn";
+        var host =
+          proto == "https:" || proto == "file:" ? "https://server" : "//cdn";
         if (window.location.hash == "#cpmstarDev") host = "//dev.server";
-        if (window.location.hash == "#cpmstarStaging") host = "//staging.server";
-        s.src = host + ".cpmstar.com/cached/zonefiles/" + zonefile + ".js?rnd=" + rnd;
+        if (window.location.hash == "#cpmstarStaging")
+          host = "//staging.server";
+        s.src =
+          host + ".cpmstar.com/cached/zonefiles/" + zonefile + ".js?rnd=" + rnd;
         var s2 = document.getElementsByTagName("script")[0];
         s2.parentNode.insertBefore(s, s2);
         window.cpmstarAPI = function (o) {
@@ -78,7 +89,9 @@
       if (urlParams.has("v")) {
         gameJsonUrl = gameJsonUrl.replace(/[0-9][0-9]+/i, urlParams.get("v"));
       }
-      var gameInstance = UnityLoader.instantiate("gameContainer", gameJsonUrl, { onProgress: UnityProgress });
+      var gameInstance = UnityLoader.instantiate("gameContainer", gameJsonUrl, {
+        onProgress: UnityProgress,
+      });
 
       function UnityProgress(gameInstance, progress) {
         if (!gameInstance.Module) {
@@ -106,9 +119,17 @@
         if (!gameInstance) return;
 
         if (document.visibilityState == "hidden") {
-          gameInstance.SendMessage("FocusManager", "ApplicationFocusChangedWebCallback", 0);
+          gameInstance.SendMessage(
+            "FocusManager",
+            "ApplicationFocusChangedWebCallback",
+            0
+          );
         } else {
-          gameInstance.SendMessage("FocusManager", "ApplicationFocusChangedWebCallback", 1);
+          gameInstance.SendMessage(
+            "FocusManager",
+            "ApplicationFocusChangedWebCallback",
+            1
+          );
         }
       });
 
@@ -121,8 +142,12 @@
       function showAds() {
         console.log("show ads");
 
-        document.getElementsByClassName("ad-rectangle-bottom")[0].style.display = "block";
-        document.getElementsByClassName("ad-leaderboard-bottom")[0].style.display = "block";
+        document.getElementsByClassName(
+          "ad-rectangle-bottom"
+        )[0].style.display = "block";
+        document.getElementsByClassName(
+          "ad-leaderboard-bottom"
+        )[0].style.display = "block";
         document.getElementById("adRectangleUpper").style.display = "block";
 
         refresh();
@@ -131,18 +156,40 @@
       function hideAds() {
         console.log("hide ads");
 
-        document.getElementsByClassName("ad-rectangle-bottom")[0].style.display = "none";
-        document.getElementsByClassName("ad-leaderboard-bottom")[0].style.display = "none";
+        document.getElementsByClassName(
+          "ad-rectangle-bottom"
+        )[0].style.display = "none";
+        document.getElementsByClassName(
+          "ad-leaderboard-bottom"
+        )[0].style.display = "none";
         document.getElementById("adRectangleUpper").style.display = "none";
       }
 
       function refresh() {
-        if (document.getElementById("adRectangleBottom") != null && window.getComputedStyle(document.getElementsByClassName("ad-smallscreen")[0]).display != "none") {
-          cpmstarAPI({ kind: "adcmd", module: "POOL 84816", command: "refresh" });
+        if (
+          document.getElementById("adRectangleBottom") != null &&
+          window.getComputedStyle(
+            document.getElementsByClassName("ad-smallscreen")[0]
+          ).display != "none"
+        ) {
+          cpmstarAPI({
+            kind: "adcmd",
+            module: "POOL 84816",
+            command: "refresh",
+          });
         }
 
-        if (document.getElementById("adLeaderboardBottom") != null && window.getComputedStyle(document.getElementsByClassName("ad-largescreen")[0]).display != "none") {
-          cpmstarAPI({ kind: "adcmd", module: "POOL 85075", command: "refresh" });
+        if (
+          document.getElementById("adLeaderboardBottom") != null &&
+          window.getComputedStyle(
+            document.getElementsByClassName("ad-largescreen")[0]
+          ).display != "none"
+        ) {
+          cpmstarAPI({
+            kind: "adcmd",
+            module: "POOL 85075",
+            command: "refresh",
+          });
         }
 
         cpmstarAPI({ kind: "adcmd", module: "POOL 85074", command: "refresh" });
